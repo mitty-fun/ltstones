@@ -68,9 +68,9 @@ export default function Home() {
         <div className="container">
           <div className={styles.aboutContent}>
             <div className={styles.aboutText}>
-              <h2>關於立通石材</h2>
+              <h2>關於磊石石材</h2>
               <p>
-                立通石材成立多年，專注於高品質石材的進口、銷售與加工。我們與西班牙、義大利等頂級石材產地直接合作，確保每一塊石材的品質與獨特性。
+                磊石石材成立多年，專注於高品質石材的進口、銷售與加工。我們與西班牙、義大利等頂級石材產地直接合作，確保每一塊石材的品質與獨特性。
               </p>
               <p>
                 我們的專業團隊擁有豐富的經驗，能夠提供從選材、設計到施工的全方位服務，滿足客戶的各種需求。
@@ -80,10 +80,13 @@ export default function Home() {
               </Link>
             </div>
             <div className={styles.aboutImage}>
-              {/* 請替換為適當的石材工廠或展示空間圖片 */}
-              <div className={styles.placeholderImage}>
-                <span>石材工廠圖片</span>
-              </div>
+              <Image 
+                src="/images/about/company-exterior.png" 
+                alt="磊石石材工廠" 
+                width={600} 
+                height={400} 
+                style={{ objectFit: "cover", width: "100%", height: "100%" }}
+              />
             </div>
           </div>
         </div>

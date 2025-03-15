@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/vercel.svg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/about/company-exterior.png');
   background-size: cover;
   background-position: center;
   color: white;
@@ -145,12 +145,12 @@
 
 /* Process Section */
 .processSection {
-  background-color: white;
+  background-color: var(--light-color);
 }
 
 .processSteps {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -197,6 +197,12 @@
   font-size: 1.2rem;
 }
 
+@media (max-width: 992px) {
+  .processSteps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2.2rem;
@@ -216,5 +222,13 @@
   
   .processSteps {
     grid-template-columns: 1fr;
+  }
+  
+  .servicesGrid, .productsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ctas {
+    flex-direction: column;
   }
 }

@@ -7,22 +7,22 @@ export default function Home() {
     {
       title: "西班牙進口大板磚",
       description: "優質大板磚，多種紋理選擇，適合各種室內裝修需求",
-      icon: "/globe.svg",
+      icon: "/ltstones/globe.svg",
     },
     {
       title: "各式貼面石材",
       description: "多樣化貼面石材，提供客製化設計與施工方案",
-      icon: "/file.svg",
+      icon: "/ltstones/file.svg",
     },
     {
       title: "專業加工服務",
       description: "精準切割、拋光、倒角等專業加工，打造完美成品",
-      icon: "/window.svg",
+      icon: "/ltstones/window.svg",
     },
     {
       title: "石材規劃顧問",
       description: "專業團隊提供石材選擇、搭配、施工等全方位諮詢",
-      icon: "/globe.svg",
+      icon: "/ltstones/globe.svg",
     },
   ];
 
@@ -100,7 +100,7 @@ export default function Home() {
               <div key={index} className={styles.productCard}>
                 <div className={styles.productImage}>
                   <Image 
-                    src={`/items/${item}`} 
+                    src={`/ltstones/items/${item}`} 
                     alt={item.replace(".png", "").split("-").slice(1).join("-")} 
                     width={300} 
                     height={200} 

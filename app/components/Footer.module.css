@@ -1,0 +1,59 @@
+.footer {
+  background-color: #2d2d2d;
+  color: #fff;
+  padding: 3rem 2rem 1rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #9c8261;
+}
+
+.section p {
+  margin-bottom: 0.5rem;
+  color: #ccc;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.section ul li a:hover {
+  color: #9c8261;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #444;
+  color: #999;
+  font-size: 0.9rem;
+}

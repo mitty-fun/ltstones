@@ -1,0 +1,146 @@
+/* FAQ內容區塊 */
+.faqContent {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+/* 分類導航 */
+.faqCategories {
+  position: sticky;
+  top: 100px;
+  align-self: start;
+}
+
+.categoryList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.categoryLink {
+  display: block;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: var(--dark-color);
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.categoryLink:hover,
+.categoryLink:focus {
+  border-left-color: var(--primary-color);
+  color: var(--primary-color);
+  transform: translateX(5px);
+}
+
+/* 問題區塊 */
+.faqCategory {
+  margin-bottom: 3rem;
+  scroll-margin-top: 100px;
+}
+
+.categoryTitle {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.questionItem {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.questionItem:hover {
+  transform: translateY(-5px);
+}
+
+.question {
+  font-size: 1.2rem;
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+}
+
+.answer {
+  color: #666;
+  line-height: 1.7;
+}
+
+/* 連絡區塊 */
+.contactSection {
+  background-color: var(--light-color);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.contactSection h2 {
+  margin-bottom: 1rem;
+}
+
+.contactSection p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.contactButtons {
+  display: flex;
+  justify-content: center;
+}
+
+/* 估價區塊 */
+.estimateSection {
+  padding: 4rem 0;
+}
+
+.estimateCard {
+  background-color: var(--primary-color);
+  border-radius: 0.5rem;
+  padding: 3rem;
+  color: white;
+  text-align: center;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.estimateCard h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.estimateCard p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-size: 1.1rem;
+}
+
+/* 響應式設計 */
+@media (max-width: 992px) {
+  .faqContent {
+    grid-template-columns: 1fr;
+  }
+  
+  .faqCategories {
+    position: static;
+    margin-bottom: 2rem;
+  }
+  
+  .categoryList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .categoryLink {
+    margin-bottom: 0;
+    padding: 0.5rem 1rem;
+  }
+}

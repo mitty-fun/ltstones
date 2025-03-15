@@ -1,0 +1,132 @@
+/* 分類導航 */
+.categoryNav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+}
+
+.categoryLink {
+  padding: 0.5rem 1.5rem;
+  background-color: var(--light-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.categoryLink:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* 系列區塊 */
+.seriesSection {
+  margin-bottom: 4rem;
+  scroll-margin-top: 100px; /* 用於錨點導航，確保瀏覽器捲動時有足夠的上方間距 */
+}
+
+.seriesTitle {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+/* 產品網格 */
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* 產品卡片 */
+.productCard {
+  background-color: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+}
+
+.productImage {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.productInfo {
+  padding: 1.5rem;
+}
+
+.productInfo h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.productCode {
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.productSize {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+/* 聯繫區域 */
+.contactSection {
+  background-color: var(--light-color);
+  padding: 4rem 0;
+  margin-top: 2rem;
+}
+
+.contactWrapper {
+  background-color: white;
+  padding: l3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contactText {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.contactText h2 {
+  margin-bottom: 1rem;
+}
+
+.contactText p {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .categoryNav {
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .categoryLink {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .seriesTitle {
+    font-size: 1.5rem;
+  }
+  
+  .productsGrid {
+    grid-template-columns: 1fr;
+  }
+}

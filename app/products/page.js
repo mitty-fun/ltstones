@@ -21,7 +21,7 @@ async function getStoneProducts() {
       code,
       chineseName,
       englishName,
-      imagePath: `/ltstones/items/${filename}`,
+      imagePath: `/items/${filename}`,
       size: '320cm × 160cm', // 所有石材的標準尺寸
       filename
     };

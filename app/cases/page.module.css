@@ -48,7 +48,9 @@
 }
 
 .featuredImage {
-  height: 100%;
+  height: 350px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .featuredContent {
@@ -74,10 +76,15 @@
   color: var(--dark-color);
 }
 
-.featuredContent p {
+.featuredDescription {
   margin-bottom: 1.5rem;
   color: #666;
   line-height: 1.7;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: 80px;
 }
 
 .readMore {
@@ -117,6 +124,7 @@
 .caseImage {
   position: relative;
   height: 200px;
+  overflow: hidden;
 }
 
 .caseCategory {
@@ -143,6 +151,11 @@
   color: #666;
   font-size: 0.95rem;
   line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: 50px;
 }
 
 /* 服務流程 */
@@ -284,6 +297,10 @@
     grid-template-columns: 1fr;
   }
   
+  .featuredImage {
+    height: 300px;
+  }
+  
   .processSteps::before {
     display: none;
   }
@@ -301,6 +318,10 @@
   
   .casesHero h1 {
     font-size: 2.2rem;
+  }
+  
+  .featuredImage {
+    height: 250px;
   }
   
   .casesGrid {

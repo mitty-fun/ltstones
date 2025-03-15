@@ -10,7 +10,7 @@ export default function CasesPage() {
       title: '台北豪宅廚房改造',
       category: '住宅',
       description: '為台北市信義區高級住宅打造精緻廚房，使用頂級大理石廚房檯面，完美結合實用性與美觀。',
-      image: '/vercel.svg', // 假設這是示意圖，實際應用需替換為實際案例照片
+      image: '/images/cases/case-1-kitchen.png', // 西班牙進口行雲流水大理石 Bianco Lasa
       featured: true,
     },
     {
@@ -18,7 +18,7 @@ export default function CasesPage() {
       title: '現代風商業空間',
       category: '商業',
       description: '為知名精品店設計石材地板與牆面，運用大理石與花崗岩相互搭配，創造典雅奢華空間。',
-      image: '/vercel.svg',
+      image: '/images/cases/case-2-commercial.png', // 西班牙進口黃金雕刻白 Marvel Gold
       featured: true,
     },
     {
@@ -26,7 +26,7 @@ export default function CasesPage() {
       title: '飯店大廳翻新',
       category: '商業',
       description: '為五星級飯店大廳進行石材鋪設，使用進口大理石，提升整體質感與氛圍。',
-      image: '/vercel.svg',
+      image: '/images/cases/case-3-hotel.png', // 西班牙進口聖羅蘭黑金 St.Laurent
       featured: true,
     },
     {
@@ -34,7 +34,7 @@ export default function CasesPage() {
       title: '現代簡約風住宅牆面',
       category: '住宅',
       description: '為新北市住宅客廳打造大理石電視牆，簡約設計搭配精緻石材，創造精緻居家空間。',
-      image: '/vercel.svg',
+      image: '/images/cases/case-4-residential.png', // 西班牙進口雕刻白 Kalos Bianco
       featured: false,
     },
     {
@@ -42,7 +42,7 @@ export default function CasesPage() {
       title: '辦公室接待區石材應用',
       category: '商業',
       description: '企業總部接待區石材地板與前台設計，運用高質感石英石，展現品牌專業形象。',
-      image: '/vercel.svg',
+      image: '/images/cases/case-5-office.png', // 西班牙進口銀彩石英石 Supergrey
       featured: false,
     },
     {
@@ -50,7 +50,7 @@ export default function CasesPage() {
       title: '豪宅衛浴空間',
       category: '住宅',
       description: '為高級住宅設計豪華衛浴空間，使用進口大理石，打造猶如星級飯店的浴室體驗。',
-      image: '/vercel.svg',
+      image: '/images/cases/case-6-bathroom.png', // 西班牙進口森林之花 Fior di Bosco
       featured: false,
     },
     {
@@ -58,7 +58,7 @@ export default function CasesPage() {
       title: '餐廳石材裝修',
       category: '商業',
       description: '知名連鎖餐廳石材地板與牆面設計，使用耐磨石材，兼顧美觀與實用性。',
-      image: '/vercel.svg',
+      image: '/images/cases/case-7-restaurant.png', // 西班牙進口坦柏拉 Tambora
       featured: false,
     },
     {
@@ -66,7 +66,7 @@ export default function CasesPage() {
       title: '住宅廚房洽面',
       category: '住宅',
       description: '為新成屋設計廚房檯面，選用耐用的石英石，完美結合現代設計風格與實用性。',
-      image: '/vercel.svg',
+      image: '/images/cases/case-8-kitchen-counter.png', // 西班牙進口香草天空 Colossal Cream
       featured: false,
     },
   ];
@@ -97,14 +97,14 @@ export default function CasesPage() {
                   src={project.image} 
                   alt={project.title} 
                   width={600} 
-                  height={400}
-                  style={{ objectFit: 'cover' }}
+                  height={350}
+                  style={{ objectFit: 'cover', width: '100%', height: '350px' }}
                 />
               </div>
               <div className={styles.featuredContent}>
                 <span className={styles.category}>{project.category}</span>
                 <h3>{project.title}</h3>
-                <p>{project.description}</p>
+                <p className={styles.featuredDescription}>{project.description}</p>
                 <Link href={`#case-${project.id}`} className={styles.readMore}>
                   了解更多 →
                 </Link>
@@ -126,8 +126,8 @@ export default function CasesPage() {
                   src={project.image} 
                   alt={project.title} 
                   width={400} 
-                  height={300}
-                  style={{ objectFit: 'cover' }}
+                  height={200}
+                  style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                 />
                 <span className={styles.caseCategory}>{project.category}</span>
               </div>
@@ -149,26 +149,31 @@ export default function CasesPage() {
           <div className={styles.processSteps}>
             <div className={styles.processStep}>
               <div className={styles.stepNumber}>01</div>
+              <Image src="/images/cases/process/step-1.svg" alt="需求諮詢" width={40} height={40} className={styles.stepIcon} />
               <h3>需求諮詢</h3>
               <p>了解客戶需求與預算，提供初步建議與方案。</p>
             </div>
             <div className={styles.processStep}>
               <div className={styles.stepNumber}>02</div>
+              <Image src="/images/cases/process/step-2.svg" alt="方案設計" width={40} height={40} className={styles.stepIcon} />
               <h3>方案設計</h3>
               <p>根據需求提供詳細設計方案與石材選擇建議。</p>
             </div>
             <div className={styles.processStep}>
               <div className={styles.stepNumber}>03</div>
+              <Image src="/images/cases/process/step-3.svg" alt="施工規劃" width={40} height={40} className={styles.stepIcon} />
               <h3>施工規劃</h3>
               <p>確定方案後安排專業團隊進行現場測量與施工規劃。</p>
             </div>
             <div className={styles.processStep}>
               <div className={styles.stepNumber}>04</div>
+              <Image src="/images/cases/process/step-4.svg" alt="精準施工" width={40} height={40} className={styles.stepIcon} />
               <h3>精準施工</h3>
               <p>專業師傅進行石材裁切、加工與安裝，確保施工品質。</p>
             </div>
             <div className={styles.processStep}>
               <div className={styles.stepNumber}>05</div>
+              <Image src="/images/cases/process/step-5.svg" alt="品質驗收" width={40} height={40} className={styles.stepIcon} />
               <h3>品質驗收</h3>
               <p>嚴格檢查施工品質，確保符合客戶需求與標準。</p>
             </div>

@@ -8,19 +8,19 @@ export default function AboutPage() {
       name: '張經理',
       position: '公司負責人',
       bio: '擁有超過20年的石材產業經驗，專精於高端石材的選材與應用，多次帶領團隊完成重大工程專案。',
-      image: '/vercel.svg', // 將來替換為團隊成員照片
+      image: '/images/about/team-1.png', // 西班牙石材專家
     },
     {
       name: '李經理',
       position: '銷售總監',
       bio: '專注於客戶需求分析與方案規劃，命中率高，與多家石材廠商合作，為陕盡最優質的選擇。',
-      image: '/vercel.svg',
+      image: '/images/about/team-2.png', // 西班牙石材專家
     },
     {
       name: '王設計師',
       position: '主任設計師',
       bio: '擁有建築室內設計背景，專精於將石材的蕩色與紋理實現客座的設計願景，經常與知名室內設計師合作。',
-      image: '/vercel.svg',
+      image: '/images/about/team-3.png', // 西班牙石材專家
     },
   ];
 
@@ -56,22 +56,22 @@ export default function AboutPage() {
     {
       title: '貭積質量',
       description: '我們堅持選擇最高品質的石材，確保專案的每個細節都經得起時間考驗。',
-      icon: '/vercel.svg',
+      icon: '/images/about/value-1.svg',
     },
     {
       title: '專業技術',
       description: '我們擁有蓄積多年的石材加工技術，不斷創新與提升技術水平。',
-      icon: '/vercel.svg',
+      icon: '/images/about/value-2.svg',
     },
     {
       title: '客戶至上',
       description: '我們重視客戶需求，提供量身設計與專業建議，確保客戶滿意。',
-      icon: '/vercel.svg',
+      icon: '/images/about/value-3.svg',
     },
     {
       title: '唯美設計',
       description: '我們賽重細節與設計美學，讓每個專案都成為獨一無二的藝術品。',
-      icon: '/vercel.svg',
+      icon: '/images/about/value-4.svg',
     },
   ];
 
@@ -96,10 +96,13 @@ export default function AboutPage() {
           </div>
           <div className={styles.aboutImageWrapper}>
             <div className={styles.aboutImage}>
-              {/* 需要替換為公司照片 */}
-              <div className={styles.imagePlaceholder}>
-                <span>公司外觀照片</span>
-              </div>
+              <Image 
+                src="/images/about/company-exterior.png" 
+                alt="磊石石材公司外觀" 
+                width={500} 
+                height={350} 
+                style={{ objectFit: 'cover' }}
+              />
             </div>
           </div>
         </div>
@@ -162,14 +165,25 @@ export default function AboutPage() {
         <p className="section-subtitle">我們與奮齊辭擊的石材品牌合作，提供高品質產品</p>
         
         <div className={styles.partnersGrid}>
-          {/* 需要替換為合作品牌標誌 */}
-          {[1, 2, 3, 4, 5, 6].map((i) => (
-            <div key={i} className={styles.partnerLogo}>
-              <div className={styles.logoPlaceholder}>
-                <span>合作品牌 {i}</span>
-              </div>
-            </div>
-          ))}
+          {/* 西班牙知名石材品牌 */}
+          <div className={styles.partnerLogo}>
+            <Image src="/images/about/partner-1.svg" alt="西班牙石材品牌 Cosentino" width={100} height={60} />
+          </div>
+          <div className={styles.partnerLogo}>
+            <Image src="/images/about/partner-2.svg" alt="西班牙石材品牌 Levantina" width={100} height={60} />
+          </div>
+          <div className={styles.partnerLogo}>
+            <Image src="/images/about/partner-3.svg" alt="西班牙石材品牌 TheSize" width={100} height={60} />
+          </div>
+          <div className={styles.partnerLogo}>
+            <Image src="/images/about/partner-4.svg" alt="西班牙石材品牌 Porcelanosa" width={100} height={60} />
+          </div>
+          <div className={styles.partnerLogo}>
+            <Image src="/images/about/partner-5.svg" alt="西班牙石材品牌 Silestone" width={100} height={60} />
+          </div>
+          <div className={styles.partnerLogo}>
+            <Image src="/images/about/partner-6.svg" alt="西班牙石材品牌 Dekton" width={100} height={60} />
+          </div>
         </div>
       </section>
       

@@ -1,11 +1,14 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        <Link href="/">磊石石材</Link>
+        <Link href="/">
+          <Image src="/logo.jpg" alt="磊石石材" width={180} height={60} style={{ objectFit: 'contain', height: 'auto' }} priority />
+        </Link>
       </div>
       <ul className={styles.navLinks}>
         <li>
